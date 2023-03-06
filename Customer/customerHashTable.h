@@ -10,10 +10,9 @@ public:
     // Methods
   bool isEmpty() const;
   int hashFunction(int key);
-  Customer* retrieveCustomer(int key);
-  void addCustomer(int key, Customer *customer);
-  void removeCustomer(int key);
-  Customer searchTable(int key);
+  Customer* retrieveCustomer(int key) const;
+  bool addCustomer(int key, Customer *customer);
+  bool removeCustomer(int key);
 
 private:
     // Hash table (chaining) to store all customers
