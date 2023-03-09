@@ -8,6 +8,7 @@
    commands of borrow and return for Movies and their commands history is
    recorded.
 */
+
 #include "customer.h"
 
 // ----------------------------Default Constructor-----------------------------
@@ -27,44 +28,104 @@ Customer::Customer() {
 // Postcondition: Customer object with assigned data created.
 // ----------------------------------------------------------------------------
 Customer::Customer(int ID, string lastName, string firstName) {
-  customerID = ID;
-  customerLastName = lastName;
-  customerFirstName = firstName;
+  this->customerID = ID;
+  this->customerLastName = lastName;
+  this->customerFirstName = firstName;
 }
 
+/* SUBJECT TO DELETION
 // ---------------------------------Destructor---------------------------------
-// Deletes and deallocates Customer nodes.
+// Deletes and deallocates customer nodes.
 // Precondition: None.
 // Postcondition: All nodes are deleted/deallocated.
 // ----------------------------------------------------------------------------
-Customer::~Customer() {
-  // Will work on this after I've created customerHashTable
-}
+Customer::~Customer() {}
+*/
+
+// ---------------------------displayCommandHistory----------------------------
+// Prints out a customer's full name along with their history of borrowing 
+// and returning movies.
+// Precondition: None.
+// Postcondition: Prints out customer's last name, first name, then their 
+// history of commands.
+// ----------------------------------------------------------------------------
+  void Customer::displayCommandHistory() {
+    cout << "History for " << getCustomerLastName() << getCustomerFirstName() 
+      << ":\n";
+    for (int i = 0; i < getCustomerHistory().size(); i++) {
+      cout << customerHistory[i] << endl; // Will either overload << in Commands or just change vector<Commands> to <string>
+    }
+  }
 
 // ----------------------------getCustomerLastName-----------------------------
-// Accessor method for Customer's customerLastName.
+// Accessor method for customer's customerLastName.
 // Precondition: None.
-// Postcondition: Returns Customer's customerLastName.
+// Postcondition: Returns customer's customerLastName.
 // ----------------------------------------------------------------------------
 string Customer::getCustomerLastName() const {
   return customerLastName;
 }
 
 // ----------------------------getCustomerFirstName----------------------------
-// Accessor method for Customer's customerFirstName.
+// Accessor method for customer's customerFirstName.
 // Precondition: None.
-// Postcondition: Returns Customer's customerFirstName.
+// Postcondition: Returns customer's customerFirstName.
 // ----------------------------------------------------------------------------
 string Customer::getCustomerFirstName() const {
   return customerFirstName;
 }
 
 // -------------------------------getCustomerID--------------------------------
-// Accessor method for Customer's customerID.
+// Accessor method for customer's customerID.
 // Precondition: None.
-// Postcondition: Returns Customer's customerID.
+// Postcondition: Returns customer's customerID.
 // ----------------------------------------------------------------------------
 int Customer::getCustomerID() const {
   return customerID;
 }
 
+/*
+// -----------------------------getCustomerHistory-----------------------------
+// Accessor method for customer's customerHistory.
+// Precondition: None.
+// Postcondition: Returns customer's customerHistory.
+// ----------------------------------------------------------------------------
+vector<Commands> Customer::getCustomerHistory() const {
+  return customerHistory;
+}
+*/
+
+// -----------------------------getCustomerHistory-----------------------------
+// Accessor method for customer's customerHistory.
+// Precondition: None.
+// Postcondition: Returns customer's customerHistory.
+// ----------------------------------------------------------------------------
+vector<string> Customer::getCustomerHistory() const {
+  return customerHistory;
+}
+
+// ---------------------------deleteCustomerHistory----------------------------
+// Deletes the history of commands for a customer.
+// Precondition: None.
+// Postcondition: Removes all values in customer's vector, customerHistory.
+// ----------------------------------------------------------------------------
+void Customer::deleteCustomerHistory() {
+  if (!(this->customerHistory.empty())) {
+    this->customerHistory.clear();
+  }
+}
+
+// -----------------------------BOOLEAN OPERATORS------------------------------
+// ---------------------------------operator==---------------------------------
+// See if two customer objects are equivalent by their ID numbers.
+// Precondition: The two customers must exist.
+// Postcondition: Return true if IDs are equivalent, false if not.
+// ----------------------------------------------------------------------------
+bool Customer::operator==(const Customer &rhs) {
+  if (this->getCustomerID() == rhs.getCustomerID()) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}

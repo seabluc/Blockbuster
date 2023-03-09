@@ -12,7 +12,6 @@ public:
 
   // Methods
   virtual bool action(Movie* movie, Customer* customer);
-
 protected:
   char commandType; // 'B', 'H', 'I', 'R'
 };

@@ -9,7 +9,6 @@ public:
 
   // Methods
   virtual bool action(Movie* movie, Customer* customer);
-
 protected:
 // Do we need anything here? I figured we get the actual customerID from Customer class.
 };

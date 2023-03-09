@@ -21,7 +21,6 @@ public:
   virtual bool operator<(const Movie& rhs) const;
   virtual bool operator>=(const Movie& rhs) const;
   virtual bool operator>(const Movie& rhs) const;
-
 protected:
   int stock;
   int monthReleased; // 1-12

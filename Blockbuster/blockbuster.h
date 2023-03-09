@@ -28,7 +28,6 @@ public:
   bool readCustomersFile(ifstream& file);
   bool readCommandsFile(ifstream& file);
   void executeCommands();  // commandsDatabase queue for sequential execution
-  
 private:
   queue<Commands> commandsDatabase;             // Queue to run commands (Transaction Factory)
   list<pair<int, Customer>> customerDatabase; // Hash Table for store customers

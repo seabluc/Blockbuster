@@ -31,9 +31,8 @@ public:
   virtual bool operator<(const Movie& rhs) const;
   virtual bool operator>=(const Movie& rhs) const;
   virtual bool operator>(const Movie& rhs) const;
-
 protected:
-  struct movieNode {
+  struct MovieNode {
     MovieNode* left;
     MovieNode* right;
     Movie* movie;

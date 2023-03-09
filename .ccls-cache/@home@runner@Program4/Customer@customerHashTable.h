@@ -1,25 +1,39 @@
+// ----------------------------customerHashTable.h-----------------------------
+// Group 9 CSS343D
+// Created 3/01/23
+// Date of Last Modification: 3/05/23
+// ----------------------------------------------------------------------------
+/* Purpose - Header file for hash table that contain buckets to store customers
+   and perform the operations add, remove, and retrieve with O(1) efficiency.
+*/
+
 #ifndef CUSTOMERHASHTABLE_H
 #define CUSTOMERHASHTABLE_H
 #include "customer.h"
+
+// Hash table (chaining) to store all customers
+static const int hashSize = 101; // Large prime number
 
 class CustomerHashTable {
 public:
   CustomerHashTable();
   ~CustomerHashTable();
 
-    // Methods
-  bool isEmpty() const;
-  int hashFunction(int key);
-  Customer* retrieveCustomer(int key);
-  void addCustomer(int key, Customer *customer);
-  void removeCustomer(int key);
-  Customer searchTable(int key);
-
+  // Methods
+  Customer retrieveCustomer(int customerID);
+  bool addCustomer(Customer &customer);
+  bool removeCustomer(int customerID);
 private:
-    // Hash table (chaining) to store all customers
-    static const int hashSize = 101; // Large prime number
-    // Array of linked list
-    list<pair<int, Customer>> table[hashSize]; // List 1, Index 0, List 2, Index 1...
-
+  // Node to store into hash table (chaining), holds a Customer object.
+  struct HashNode {
+    int customerID;    // CustomerID, which also serves as a key
+    Customer customer; // The Customer object
+    HashNode *next;
+  };
+  // Hash table to store all customers, represented as a double pointer.
+  HashNode **table;
+  
+  // Helper function
+  int hashFunction(int key);
 };
 #endif

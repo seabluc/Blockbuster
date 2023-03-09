@@ -9,7 +9,6 @@ public:
 
   // Methods
   virtual bool action(Movie* movie, Customer* customer);
-
 protected:
 // I don't think we need anything at all here
 };
