@@ -1,0 +1,124 @@
+---------------------------
+Comedy:
+Genre: F	 Media: D	 Stock: 10	 Director: Nora Ephron	 Title: Sleepless in Seattle	 Year released: 1993
+Genre: F	 Media: D	 Stock: 10	 Director: Woody Allen	 Title: Annie Hall	 Year released: 1977
+Genre: F	 Media: D	 Stock: 10	 Director: Rob Reiner	 Title: When Harry Met Sally	 Year released: 1989
+Genre: F	 Media: D	 Stock: 10	 Director: Gore Verbinski	 Title: Pirates of the Caribbean	 Year released: 2003
+Genre: F	 Media: D	 Stock: 10	 Director: Joel Coen	 Title: Fargo	 Year released: 1996
+Genre: F	 Media: D	 Stock: 10	 Director: John Landis	 Title: National Lampoon's Animal House	 Year released: 1978
+Genre: F	 Media: D	 Stock: 10	 Director: Nora Ephron	 Title: You've Got Mail	 Year released: 1998
+
+---------------------------
+Classics:
+Genre: C	Media: D	Stock: 10	Director: Michael Curtiz	Title: Casablanca		Major Actor: Ingrid Bergman		Month released: 8	Year released: 1942
+Genre: C	Media: D	Stock: 10	Director: Michael Curtiz	Title: Casablanca		Major Actor: Humphrey Bogart		Month released: 8	Year released: 1942
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: The Wizard of Oz		Major Actor: Judy Garland		Month released: 7	Year released: 1939
+Genre: C	Media: D	Stock: 10	Director: Hal Ashby	Title: Harold and Maude		Major Actor: Ruth Gordon		Month released: 3	Year released: 1971
+Genre: C	Media: D	Stock: 10	Director: George Cukor	Title: Holiday		Major Actor: Katherine Hepburn		Month released: 9	Year released: 1938
+Genre: C	Media: D	Stock: 10	Director: George Cukor	Title: Holiday		Major Actor: Cary Grant		Month released: 9	Year released: 1938
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: Gone With the Wind		Major Actor: Vivien Leigh		Month released: 2	Year released: 1939
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: Gone With the Wind		Major Actor: Clark Gable		Month released: 2	Year released: 1939
+Genre: C	Media: D	Stock: 10	Director: George Cukor	Title: The Philadelphia Story		Major Actor: Katherine Hepburn		Month released: 5	Year released: 1940
+Genre: C	Media: D	Stock: 10	Director: George Cukor	Title: The Philadelphia Story		Major Actor: Cary Grant		Month released: 5	Year released: 1940
+Genre: C	Media: D	Stock: 10	Director: John Huston	Title: The Maltese Falcon		Major Actor: Humphrey Bogart		Month released: 10	Year released: 1941
+Genre: C	Media: D	Stock: 10	Director: Frank Capra	Title: It's a Wonderful Life		Major Actor: James Steward		Month released: 11	Year released: 1946
+Genre: C	Media: D	Stock: 10	Director: Frank Capra	Title: It's a Wonderful Life		Major Actor: Donna Reed		Month released: 11	Year released: 1946
+Genre: C	Media: D	Stock: 10	Director: Stanley Kubrick	Title: A Clockwork Orange		Major Actor: Malcolm McDowell		Month released: 2	Year released: 1971
+
+---------------------------
+Drama:
+Genre: D	 Media: D	 Stock: 10	 Director: Barry Levinson	 Title: Good Morning Vietnam	 Year released: 1988
+Genre: D	 Media: D	 Stock: 10	 Director: Gus Van Sant	 Title: Good Will Hunting	 Year released: 2000
+Genre: D	 Media: D	 Stock: 10	 Director: Phillippe De Broca	 Title: King of Hearts	 Year released: 1967
+Genre: D	 Media: D	 Stock: 10	 Director: Steven Spielberg	 Title: Schindler's List	 Year released: 1993
+Genre: D	 Media: D	 Stock: 10	 Director: Jonathan Demme	 Title: Silence of the Lambs	 Year released: 1991
+Genre: D	 Media: D	 Stock: 10	 Director: Clint Eastwood	 Title: Unforgiven	 Year released: 1992
+Genre: D	 Media: D	 Stock: 10	 Director: Nancy Savoca	 Title: Dogfight	 Year released: 1991
+
+History for 1000 Minnie Mouse:
+
+History for 5000 Freddie Frog:
+
+History for 8000 Wally Wacky:
+
+ERROR: Borrow Transaction Failed -- Customer 1234 does not exist
+ERROR: Borrow Transaction Failed -- Movie does not Exist in the Inventory
+ERROR: Borrow Transaction Failed -- Movie does not Exist in the Inventory
+ERROR: Borrow Transaction Failed -- Movie does not Exist in the Inventory
+ERROR: Borrow Transaction Failed -- Movie does not Exist in the Inventory
+ERROR: Borrow Transaction Failed -- Movie does not Exist in the Inventory
+---------------------------
+Comedy:
+Genre: F	 Media: D	 Stock: 9	 Director: Nora Ephron	 Title: Sleepless in Seattle	 Year released: 1993
+Genre: F	 Media: D	 Stock: 9	 Director: Woody Allen	 Title: Annie Hall	 Year released: 1977
+Genre: F	 Media: D	 Stock: 9	 Director: Rob Reiner	 Title: When Harry Met Sally	 Year released: 1989
+Genre: F	 Media: D	 Stock: 10	 Director: Gore Verbinski	 Title: Pirates of the Caribbean	 Year released: 2003
+Genre: F	 Media: D	 Stock: 8	 Director: Joel Coen	 Title: Fargo	 Year released: 1996
+Genre: F	 Media: D	 Stock: 9	 Director: John Landis	 Title: National Lampoon's Animal House	 Year released: 1978
+Genre: F	 Media: D	 Stock: 9	 Director: Nora Ephron	 Title: You've Got Mail	 Year released: 1998
+
+---------------------------
+Classics:
+Genre: C	Media: D	Stock: 10	Director: Michael Curtiz	Title: Casablanca		Major Actor: Ingrid Bergman		Month released: 8	Year released: 1942
+Genre: C	Media: D	Stock: 10	Director: Michael Curtiz	Title: Casablanca		Major Actor: Humphrey Bogart		Month released: 8	Year released: 1942
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: The Wizard of Oz		Major Actor: Judy Garland		Month released: 7	Year released: 1939
+Genre: C	Media: D	Stock: 0	Director: Hal Ashby	Title: Harold and Maude		Major Actor: Ruth Gordon		Month released: 3	Year released: 1971
+Genre: C	Media: D	Stock: 10	Director: George Cukor	Title: Holiday		Major Actor: Katherine Hepburn		Month released: 9	Year released: 1938
+Genre: C	Media: D	Stock: 9	Director: George Cukor	Title: Holiday		Major Actor: Cary Grant		Month released: 9	Year released: 1938
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: Gone With the Wind		Major Actor: Vivien Leigh		Month released: 2	Year released: 1939
+Genre: C	Media: D	Stock: 10	Director: Victor Fleming	Title: Gone With the Wind		Major Actor: Clark Gable		Month released: 2	Year released: 1939
+Genre: C	Media: D	Stock: 9	Director: George Cukor	Title: The Philadelphia Story		Major Actor: Katherine Hepburn		Month released: 5	Year released: 1940
+Genre: C	Media: D	Stock: 9	Director: George Cukor	Title: The Philadelphia Story		Major Actor: Cary Grant		Month released: 5	Year released: 1940
+Genre: C	Media: D	Stock: 9	Director: John Huston	Title: The Maltese Falcon		Major Actor: Humphrey Bogart		Month released: 10	Year released: 1941
+Genre: C	Media: D	Stock: 10	Director: Frank Capra	Title: It's a Wonderful Life		Major Actor: James Steward		Month released: 11	Year released: 1946
+Genre: C	Media: D	Stock: 10	Director: Frank Capra	Title: It's a Wonderful Life		Major Actor: Donna Reed		Month released: 11	Year released: 1946
+Genre: C	Media: D	Stock: 8	Director: Stanley Kubrick	Title: A Clockwork Orange		Major Actor: Malcolm McDowell		Month released: 2	Year released: 1971
+
+---------------------------
+Drama:
+Genre: D	 Media: D	 Stock: 9	 Director: Barry Levinson	 Title: Good Morning Vietnam	 Year released: 1988
+Genre: D	 Media: D	 Stock: 9	 Director: Gus Van Sant	 Title: Good Will Hunting	 Year released: 2000
+Genre: D	 Media: D	 Stock: 9	 Director: Phillippe De Broca	 Title: King of Hearts	 Year released: 1967
+Genre: D	 Media: D	 Stock: 9	 Director: Steven Spielberg	 Title: Schindler's List	 Year released: 1993
+Genre: D	 Media: D	 Stock: 9	 Director: Jonathan Demme	 Title: Silence of the Lambs	 Year released: 1991
+Genre: D	 Media: D	 Stock: 9	 Director: Clint Eastwood	 Title: Unforgiven	 Year released: 1992
+Genre: D	 Media: D	 Stock: 8	 Director: Nancy Savoca	 Title: Dogfight	 Year released: 1991
+
+History for 1000 Minnie Mouse:
+Borrowed Good Morning Vietnam by Barry Levinson
+Borrowed The Philadelphia Story by George Cukor
+Borrowed Good Will Hunting by Gus Van Sant
+Borrowed The Philadelphia Story by George Cukor
+Borrowed Harold and Maude by Hal Ashby
+Borrowed Fargo by Joel Coen
+
+History for 1111 Mickey Mouse:
+Borrowed A Clockwork Orange by Stanley Kubrick
+Borrowed A Clockwork Orange by Stanley Kubrick
+Borrowed Harold and Maude by Hal Ashby
+Borrowed The Maltese Falcon by John Huston
+Borrowed Holiday by George Cukor
+
+History for 5000 Freddie Frog:
+Borrowed Harold and Maude by Hal Ashby
+Returned Harold and Maude by Hal Ashby
+Borrowed Harold and Maude by Hal Ashby
+Returned Harold and Maude by Hal Ashby
+Borrowed Harold and Maude by Hal Ashby
+Returned Harold and Maude by Hal Ashby
+Borrowed Harold and Maude by Hal Ashby
+
+History for 8000 Wally Wacky:
+Borrowed You've Got Mail by Nora Ephron
+Returned You've Got Mail by Nora Ephron
+Borrowed Harold and Maude by Hal Ashby
+Borrowed Harold and Maude by Hal Ashby
+Borrowed National Lampoon's Animal House by John Landis
+
+History for 8888 Porky Pig:
+Borrowed Annie Hall by Woody Allen
+Borrowed When Harry Met Sally by Rob Reiner
+Borrowed Silence of the Lambs by Jonathan Demme
+Borrowed Dogfight by Nancy Savoca
+Borrowed Harold and Maude by Hal Ashby
+

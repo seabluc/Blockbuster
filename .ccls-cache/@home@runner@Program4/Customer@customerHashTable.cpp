@@ -1,13 +1,14 @@
 // ---------------------------customerHashTable.cpp----------------------------
 // Group 9 CSS343D
 // Created 3/01/23
-// Date of Last Modification: 3/05/23
+// Date of Last Modification: 3/09/23
 // ----------------------------------------------------------------------------
 /* Purpose - Customer class of Blockbuster. Customers all have a unique 4-digit
    ID, last name, and a first name. Additionally, customers perform the
    commands of borrow and return for Movies and their commands history is
    recorded.
 */
+
 #include "customerHashTable.h"
 #include "customer.h"
 
@@ -20,7 +21,6 @@ CustomerHashTable::CustomerHashTable() {
   this->table = new HashNode *[hashSize];
   for (int i = 0; i < hashSize; i++) {
     table[i] = nullptr;
-    table[i]->next = nullptr;
   }
 }
 
@@ -31,37 +31,64 @@ CustomerHashTable::CustomerHashTable() {
 // ----------------------------------------------------------------------------
 CustomerHashTable::~CustomerHashTable() {
   for (int i = 0; i < hashSize; i++) {
-    HashNode *crawler = table[i];
+    HashNode *crawler = nullptr;
+    crawler = table[i];
     while (crawler != nullptr) {
-      crawler->customer.deleteCustomerHistory();
       HashNode *rem = crawler;
       crawler = crawler->next;
-      rem->next = nullptr;
-      rem->customerID = 0;
       delete rem;
     }
   }
   delete[] table;
 }
 
+// ----------------------------------isExist-----------------------------------
+// Receives a customer's ID and hashes it. Returns true if they exist inside 
+// the hash table, false if the customer DNE.
+// Precondition: None.
+// Postcondition: Returns true if customer exist, false if not.
+// ----------------------------------------------------------------------------
+bool CustomerHashTable::isExist(int customerID) {
+  int index = hashFunction(customerID);
+  if (table[index] == nullptr) {
+    return false;
+  }
+  else {
+    HashNode *found = nullptr;
+    found = table[index];
+    while ((found != nullptr) && (found->customerID != customerID)) {
+      found = found->next;
+    }
+    if (found != nullptr && found->customerID == customerID) {
+      return true;
+    }
+  }
+  return false;
+}
 // ------------------------------retrieveCustomer------------------------------
 // Retrieves and returns a customer by their ID.
 // Precondition: None.
 // Postcondition: Returns customer if found, or nullptr if not found.
 // ----------------------------------------------------------------------------
-Customer CustomerHashTable::retrieveCustomer(int customerID) {
-  // Apply hashing to find the index for customer retrieval.
+Customer* CustomerHashTable::retrieveCustomer(int customerID) {
+  // Apply hashing to find the index for customer retrieval
   int index = hashFunction(customerID);
-  HashNode *found = table[index];
-  while ((found != nullptr) && (found->customerID != customerID)) {
-    found = found->next;
-  }
-  if (found->customerID == customerID) {
-    return found->customer;
-  } else {
-    // Error message: Customer ID DNE within bucket.
+  // Check if bucket is empty
+  if (table[index] == nullptr) {
+    // Error message: Customer ID DNE within bucket
     cerr << "ERROR: Customer w/ ID: " << customerID << " DNE." << endl;
+    return nullptr;
+  } 
+  else {
+    HashNode *found = table[index];
+    while ((found != nullptr) && (found->customerID != customerID)) {
+      found = found->next;
+    }
+    if (found->customerID == customerID) {
+      return &(found->customer);
+    }
   }
+  return nullptr;
 }
 
 // --------------------------------addCustomer---------------------------------
@@ -71,26 +98,31 @@ Customer CustomerHashTable::retrieveCustomer(int customerID) {
 // customer could not be added.
 // ----------------------------------------------------------------------------
 bool CustomerHashTable::addCustomer(Customer &customer) {
-  // Return false if this customer already exists in the hash table.
-  if (retrieveCustomer(customer.getCustomerID()) == customer) {
-    return false;
-  }
-  // Apply hashing to find the index for hash table insertion.
+  // Apply hashing to find the index for hash table insertion
   int index = hashFunction(customer.getCustomerID());
-  // Assign ins pointer to customer arg, assign all members.
-  HashNode *ins = new HashNode;
-  ins->customerID = customer.getCustomerID();
-  ins->customer = customer;
-  // Place customer as the head of the bucket if index is occupied.
-  if (table[index] != nullptr) {
-    ins->next = table[index];
-    table[index] = ins->next;
-    return true;
-  } else {
-    // Index not occupied, place customer into directly into bucket.
+  if (table[index] == nullptr) {
+    // Assign insert node to customer
+    HashNode *ins = new HashNode;
+    ins->customerID = customer.getCustomerID();
+    ins->customer = customer;
     table[index] = ins;
     return true;
   }
+  // Place customer as the head of the bucket if index is occupied
+  else if (table[index] != nullptr) {
+    // Test to see if customer already exist in the hash table
+    if (isExist(customer.getCustomerID())) {
+      return false;
+    }
+    // Insert customer as new head of bucket.
+    HashNode *ins = new HashNode;
+    ins->customerID = customer.getCustomerID();
+    ins->customer = customer;
+    ins->next = table[index];
+    table[index] = ins;
+    return true;
+  }
+  return false;
 }
 
 // -------------------------------removeCustomer-------------------------------
@@ -102,7 +134,7 @@ bool CustomerHashTable::removeCustomer(int customerID) {
   int index = hashFunction(customerID);
   HashNode *rem = table[index]; // Node to remove
   HashNode *prev = nullptr;     // Previous node to adjust next pointer
-  // List traversal until customerID is found or list is empty.
+  // List traversal until customerID is found or list is empty
   while ((rem != nullptr) && (rem->customerID != customerID)) {
     prev = rem;
     rem = rem->next;
@@ -112,18 +144,19 @@ bool CustomerHashTable::removeCustomer(int customerID) {
     return false;
   }
   // If the while loop was not used then the value to remove is the first
-  // element in the bucket.
+  // element in the bucket
   else if (prev == nullptr) {
     table[index] = rem->next;
   }
-  // Node was found in the list, connect prev->next to rem->next to delete rem.
+  // Node was found in the list, connect prev->next to rem->next to delete rem
   else {
     prev->next = rem->next;
   }
   // Deallocate
-  rem->customerID = 0; 
-  rem->next = nullptr; // Do I need to do this or will the destructor handle it?
+  rem->customerID = 0;
+  rem->next = nullptr; 
   delete rem;
+  return true;
 }
 
 // --------------------------------hashFunction--------------------------------

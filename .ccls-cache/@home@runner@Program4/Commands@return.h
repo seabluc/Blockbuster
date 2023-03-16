@@ -1,6 +1,13 @@
+// ----------------------------------return.h----------------------------------
+// Group 9 CSS343D
+// Created 3/01/23
+// Date of Last Modification: 3/15/23
+// ----------------------------------------------------------------------------
+// Purpose - Header file for the return command.
 #ifndef RETURN_H
 #define RETURN_H
 #include "commands.h"
+#include "../Customer/customerHashTable.h"
 
 class Return : public Commands {
 public:
@@ -8,9 +15,12 @@ public:
   virtual ~Return();
   
   // Methods
-  virtual bool action(Movie* movie, Customer* customer);
-
+  virtual bool action(list<Movie*>&, CustomerHashTable&);
+  Movie* getMovie() {
+      return movie;
+  }
 protected:
-// Do we need anything here? I figured we get the actual Movie from Movie class and customerID from Customer class.
+  Movie* movie;
+	int customerID;
 };
 #endif
